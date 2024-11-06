@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/12/sword-07.jpg');
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo1 {
+    max-width: 150px;
+    height: auto;
+}
+
+.logo2 {
+    max-width: 450px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background-color: #333;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+}
+
+/* Seção de Login */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.login-content {
+    background: #f9f9f9c0;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.login-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.login-content p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-content a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-content a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}

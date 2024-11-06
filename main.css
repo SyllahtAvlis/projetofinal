@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background-color: #333;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo1 {
+    max-width: 150px;
+    height: auto;
+}
+
+.logo2 {
+    max-width: 450px;
+    height: auto;
+}
+
+.hero-section {
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/12/sword-07.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.hero-section .btn:hover {
+    background: #555;
+}
+
+/* Destaques dos Produtos */
+.featured-products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.product-card .btn {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Categorias */
+.categories-section {
+    background: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.categories-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-item {
+    text-align: center;
+    padding: 20px;
+    max-width: 250px;
+}
+
+/* Depoimentos */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}

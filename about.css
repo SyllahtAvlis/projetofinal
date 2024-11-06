@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/12/sword-07.jpg');
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo1 {
+    max-width: 150px;
+    height: auto;
+}
+
+.logo2 {
+    max-width: 450px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background-color: #333;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+}
+
+.sobre-nos {
+    padding: 50px 20px;
+    color: hsl(0, 0%, 0%);
+    text-align: center;
+    margin-top: 100px;
+    background-color: #ffffff52;
+}
+
+.sobre-content h2 {
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.sobre-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
