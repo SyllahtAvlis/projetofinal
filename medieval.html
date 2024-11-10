@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espada Ninja - Espadas do Dragão</title>
+    <title>Espada Medieval - Espadas do Dragão</title>
     <link rel="stylesheet" href="produto.css">
     <link rel="icon" href="img/icondragao.png">
 </head>
@@ -20,8 +20,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Página principal</a></li>
-                <li><a href="about.html">Sobre Nós</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
                 <li><a href="cadastro.html">Cadastre-se</a></li>
                 <li><a href="login.html">Acesse sua conta</a></li>
             </ul>
@@ -46,10 +46,11 @@
             <!-- Div que contém os detalhes do produto -->
             <div class="detalhes-produto">
                 <h2>Espada Medieval</h2>
-                <p class="descricao">A Espada Medieval é uma lâmina afiada e elegante, forjada com técnicas tradicionais para oferecer desempenho e precisão em combate. Seu design leve e balanceado torna-a ideal para praticantes de artes marciais e colecionadores que buscam um item de alta qualidade.</p>
+                <p class="descricao">A Espada Medieval é uma lâmina robusta e imponente, desenhada para transmitir força e resistência em batalha. Forjada com técnicas históricas, ela possui um design que reflete o espírito dos cavaleiros medievais, sendo ideal tanto para entusiastas de recriações históricas quanto para colecionadores em busca de um item poderoso e autêntico.</p>
                 <p class="preco">R$ 1.500,00</p>
 
-                <button type="submit">Comprar</button>
+                <button onclick="adicionarAoCarrinho('id', ' Espada Medieval', 'A Espada Medieval é uma lâmina robusta e imponente, desenhada para transmitir força e resistência em batalha. Forjada com técnicas históricas, ela possui um design que reflete o espírito dos cavaleiros medievais, sendo ideal tanto para entusiastas de recriações históricas quanto para colecionadores em busca de um item poderoso e autêntico.', 1500, 1)">Adicionar ao Carrinho</button>
+
                 </form>
             </div>
         </section>
@@ -81,6 +82,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="produto.js"></script>
+
 </body>
 </html>
+
