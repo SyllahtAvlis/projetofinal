@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Espadas do Dragão</title>
+    <link rel="stylesheet" href="carrinho.css">
+    <link rel="icon" href="img/icondragao.png">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html">
+            <div class="logos">
+                <img src="img/logo1.png" alt="Logo da Espadas do Dragão" class="logo1">
+                <img src="img/logo2.jpg" alt="Logo adicional da Espadas do Dragão" class="logo2">
+            </div>
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Página principal</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="about.html">Sobre Nós</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="login.html">Acesse sua conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrinho">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Imagem</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitário</th>
+                        <th>Subtotal</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="carrinho">
+                    <!-- Os itens do carrinho serão inseridos aqui -->
+                </tbody>
+            </table>
+
+            <div class="total-final">
+                <h3>Total Final: <span id="total-final">R$ 0,00</span></h3>
+            </div>
+            <div id="mensagem-erro" class="mensagem-erro" style="display: none;"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Espadas do Dragão. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>
