@@ -53,13 +53,30 @@ app.post('/api/cadastrar', (req, res) => {
 // Rota POST para o login
 app.post('/login', (req, res) => {
     const { email, senha } = req.body;
+
     const registrosPath = path.join(__dirname, 'data', 'registros.json');
-    readJSONFile(registrosPath, res, (usuarios) => {
-        const usuarioEncontrado = usuarios.find(user => user.email === email && user.senha === senha);
-        if (usuarioEncontrado) {
-            res.status(200).json({ success: true, redirect: '/index.html' });
-        } else {
-            res.status(401).json({ success: false, message: 'Email ou senha incorretos.' });
+
+    fs.readFile(registrosPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo de registros:', err);
+            return res.status(500).json({ success: false, message: 'Erro ao processar o login.' });
+        }
+
+        try {
+            const usuarios = JSON.parse(data);
+            const usuarioEncontrado = usuarios.find(
+                usuario => usuario.email === email && usuario.senha === senha
+            );
+
+            if (usuarioEncontrado) {
+                // Redireciona para a página index.html em caso de sucesso no login
+                return res.redirect('/index.html');
+            } else {
+                return res.status(401).json({ success: false, message: 'Email ou senha incorretos.' });
+            }
+        } catch (parseError) {
+            console.error('Erro ao fazer o parsing do JSON de registros:', parseError);
+            return res.status(500).json({ success: false, message: 'Erro ao processar o login.' });
         }
     });
 });
